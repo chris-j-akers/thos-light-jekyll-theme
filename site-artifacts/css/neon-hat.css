@@ -1,0 +1,200 @@
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+:root {
+    /* colours */
+    --background-panel-color: #2e3337;
+    --background-page-color: #222629;
+    --heading-text-color: #86c232;
+    --highlight-color: #86c232;
+    --body-text-color: #d0d2d2;
+
+    /* fonts */
+    --body-font-family: Montserrat;
+    --heading-font-family: Montserrat;
+
+    /* global Layouts */
+    --global-container-max-width: 88rem;
+    --page-top-margin: 5rem;
+    --container-item-horizontal-gap: 1rem;
+    --panel-padding: 1rem;
+    --panel-border-radius: 1.5rem;
+
+    /* side Panel Specifics */
+    --side-panel-flex-basis: 20%;
+
+    /* toc panel specifics */
+    --toc-panel-flex-basis: 20%;
+
+    /* main Panel Specifics */
+    --post-panel-flex-basis: 60%;
+    --page-panel-flex-basis: 79%;
+
+  }
+
+/* basic html stuff */
+
+html {
+    background-color: var(--background-page-color);
+    color: var(--body-text-color);
+    font-family: var(--body-font-family);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font-family);
+    margin-top: 0;
+    color: var(--heading-text-color);
+}
+
+hr {
+    position: relative;
+    margin: 1.5rem 0;
+    border: 0;
+    border-top: 2px solid var(--highlight-color);
+    border-bottom: 2px solid var(--highlight-color)
+}
+
+a {
+    color: var(--body-text-color);
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+}
+
+/* global container */
+
+.flexbox-container {
+    display: flex;
+    max-width: var(--global-container-max-width);
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-color: pink;
+}
+
+/* side panel */
+
+.side-panel {
+    flex-basis: var(--side-panel-flex-basis);
+    padding: var(--panel-padding);
+    margin-top: var(--page-top-margin);
+    border-radius: var(--panel-border-radius);
+    background-color: var(--background-panel-color);
+    text-align: center;
+}
+
+.side-panel-title h1 a {
+    text-align: center;
+    color: var(--heading-text-color);
+}
+
+.side-panel-tag-line {
+    color: #d0d2d2;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.side-panel-contents {
+    margin-top: 1rem;
+    border-top: solid;
+    border-bottom: solid;
+    border-color: var(--highlight-color);
+}
+
+.side-panel-contents-item {
+    display: block;
+    line-height: 1.75;
+    text-align: center;
+}
+
+.side-panel-contents-item.current {
+    font-weight: bold;
+}
+
+.side-panel-nav.current-page {
+    font-weight: bold;
+  }
+
+.side-panel-contacts {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+
+/* table of contents panel (posts only) */
+
+.toc-panel {
+    flex-basis: var(--toc-panel-flex-basis);
+    padding: var(--panel-padding);
+    margin-top: var(--page-top-margin);
+    border-radius: var(--panel-border-radius);
+    background-color: var(--background-panel-color);
+    color: var(--body-text-color);
+}
+
+/* panel used to display posts (smaller so we can fit toc in) */
+
+.post-panel {
+    flex-basis: var(--post-panel-flex-basis);
+    margin-top: var(--page-top-margin);
+    padding: var(--panel-padding);
+    margin-left: var(--container-item-horizontal-gap);
+    margin-right: var(--container-item-horizontal-gap);
+    border-radius: var(--panel-border-radius);
+    background-color: var(--background-panel-color);
+    color: var(--body-text-color);
+}
+
+/* panel used to display pages */
+
+.page-panel {
+    flex-basis: var(--page-panel-flex-basis);
+    margin-top: var(--page-top-margin);
+    padding: var(--panel-padding);
+    margin-left: var(--container-item-horizontal-gap);
+    border-radius: var(--panel-border-radius);
+    background-color: var(--background-panel-color);
+    color: var(--body-text-color);
+}
+
+
+/* Re-arrange top-to-bottom if we're looking on a phone */
+
+@media (max-width: 48rem) {
+    .flexbox-container {
+        max-width: 48rem;
+        align-items: stretch;
+        flex-direction: column;
+    }
+    .side-panel {
+        order: 0;
+        max-width: 100%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+    }
+    .post-panel {
+        margin-top: 1rem;
+        right: auto;
+        order: 1;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .toc-panel {
+        order: 0;
+        max-width: 100%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1rem;
+    }
+}

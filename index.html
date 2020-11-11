@@ -2,9 +2,9 @@
 layout: default
 title: home
 ---
-<div class="panel index-list-panel" >
+<div class="panel index-panel" >
     {% for post in paginator.posts %}
-        <div class="index-list-panel-item">
+        <div class="index-panel-item">
             <a href="{{ post.url }}">
                 <h1>
                     {{ post.title }}

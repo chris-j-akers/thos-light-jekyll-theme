@@ -17,7 +17,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-
+markdown:         kramdown
 title: Your awesome title
 email: your-email@example.com
 linkedin: https://www.linkedin.com
@@ -32,7 +32,13 @@ url: "inpursuitofhisownhat.com" # the base hostname & protocol for your site, e.
 twitter_username: jekyllrb
 github_username:  jekyll
 paginate: 1
+
+
+
 # Build settings
+kramdown:
+  parse_block_html: true
+
 plugins:
   - jekyll-paginate
 

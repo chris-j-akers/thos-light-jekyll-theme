@@ -5,6 +5,7 @@
   }
 
 :root {
+
     /* colours */
     --background-panel-color: #2e3337;
     --background-page-color: #222629;
@@ -26,14 +27,20 @@
     --panel-padding: 1rem;
     --panel-border-radius: 0.5rem;
 
+    /* index panel specifics */
+    --index-panel-h1-font-size: 1.5rem;
+
     /* side panel Specifics */
     --side-panel-flex-basis: 20%;
 
     /* toc panel specifics */
     --toc-panel-flex-basis: 15%;
 
-    /* main Panel Specifics */
+    /* post panel specifics */
     --post-panel-flex-basis: 60%;
+    --post-panel-h1-font-size: 1.5rem;
+
+    /* page panel specifics */
     --page-panel-flex-basis: 78%;
 
   }
@@ -67,6 +74,7 @@ html {
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font-family);
     margin-top: 0;
+    font-size: 1.5rem;
     color: var(--heading-text-color);
 }
 
@@ -122,6 +130,11 @@ a:hover, a:focus {
     color: var(--body-text-color);
 }
 
+.post-panel h1 {
+    
+    font-size: var(--post-panel-h1-font-size);
+}
+
 /* side panel */
 
 .side-panel {
@@ -136,6 +149,7 @@ a:hover, a:focus {
 
 .side-panel-title h1 a {
     text-align: center;
+    font-size: 2rem;
     color: var(--heading-text-color);
 }
 
@@ -178,6 +192,7 @@ a:hover, a:focus {
         to match the page (darker) we need to reset padding to
         0 to align the top of the first index item with
         the panels otherwise it looks like they've moved down*/
+    flex: 1;
     background-color: var(--background-page-color);
     margin-left: var(--container-item-horizontal-gap);
     padding: 0;
@@ -193,14 +208,38 @@ a:hover, a:focus {
     border-radius: var(--panel-border-radius);
     background-color: var(--background-panel-color);
     margin-bottom: var(--container-item-vertical-gap);
-    color: var(--heading-text-color);
+    color: var(--highlight-color);
 }
 
-.index-panel-item h1 {
-    font-size: 125%;
-    color: var(--heading-text-color);
+.pagination-panel {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* clearfix */
+    text-align: center;
+  }
+  
+  /* Pagination items can be `span`s or `a`s */
+  
+.pagination-panel-item {
+    float: left;
+    width: 50%;
+    margin: 0;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--background-page-color);
+    font-weight: bolder;
+    border: 2px solid var(--highlight-color);
 }
 
+.pagination-panel-item:first-child {
+    margin-bottom: -1px;
+}
+
+/* Only provide a hover state for linked pagination items */
+
+a.pagination-item:hover {
+    background-color: var(--highlight-dark-color);
+}
 
 
 /* Re-arrange top-to-bottom if we're looking on a phone */

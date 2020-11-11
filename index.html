@@ -13,4 +13,22 @@ title: home
             </a>
         </div>
     {% endfor %}
+
+    <div class="panel pagination-panel">
+        {% if paginator.next_page %}
+          <a class="pagination-panel-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">&lt&lt</a>
+        {% else %}
+          <span class="pagination-panel-item older">&lt&lt</span>
+        {% endif %}
+        {% if paginator.previous_page %}
+          {% if paginator.page == 2 %}
+            <a class="pagination-panel-item newer" href="{{ site.baseurl }}">&gt&gt</a>
+          {% else %}
+            <a class="pagination-panel-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
+          {% endif %}
+        {% else %}
+          <span class="pagination-panel-item newer">&gt&gt</span>
+        {% endif %}
+      </div>
+
 </div>

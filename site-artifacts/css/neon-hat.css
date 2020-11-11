@@ -10,6 +10,7 @@
     --background-page-color: #222629;
     --heading-text-color: #86c232;
     --highlight-color: #86c232;
+    --highlight-dark-color: #61892f;
     --body-text-color: #d0d2d2;
     --side-panel-tag-color: #d0d2d2;
 
@@ -36,6 +37,23 @@
     --page-panel-flex-basis: 78%;
 
   }
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+    width: 1rem;
+  }
+  
+::-webkit-scrollbar-track {
+    background: var(--background-panel-color);
+  }
+  
+::-webkit-scrollbar-thumb {
+    background:var(--highlight-dark-color);
+  }
+
+::-webkit-scrollbar-thumb:hover {
+background: var(--highlight-color);
+}
 
 /* basic html stuff */
 

@@ -94,8 +94,6 @@ a:hover, a:focus {
     max-width: var(--global-container-max-width);
     margin-left: auto;
     margin-right: auto;
-    border-style: solid;
-    border-color: pink;
 }
 
 /* panel with global settings */
@@ -108,19 +106,19 @@ a:hover, a:focus {
     margin-bottom: auto;
 }
 
+/* panel used to display pages - no toc, so wider */
+
+.page-panel {
+    margin-left: var(--container-item-horizontal-gap);
+    color: var(--body-text-color);
+}
+
 /* panel used to display posts (smaller so we can fit toc in) */
 
 .post-panel {
     /* flex: 1; */
     margin-left: var(--container-item-horizontal-gap);
     margin-right: var(--container-item-horizontal-gap);
-    color: var(--body-text-color);
-}
-
-/* panel used to display pages - no toc, so wider */
-
-.page-panel {
-    margin-left: var(--container-item-horizontal-gap);
     color: var(--body-text-color);
 }
 
@@ -202,6 +200,8 @@ a:hover, a:focus {
     font-size: 125%;
     color: var(--heading-text-color);
 }
+
+
 
 /* Re-arrange top-to-bottom if we're looking on a phone */
 

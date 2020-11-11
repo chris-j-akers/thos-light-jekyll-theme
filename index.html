@@ -2,4 +2,15 @@
 layout: default
 title: home
 ---
-
+<div class="panel index-list-panel" >
+    {% for post in paginator.posts %}
+        <div class="index-list-panel-item">
+            <a href="{{ post.url }}">
+                <h1>
+                    {{ post.title }}
+                </h1>
+                {{ post.content | strip_html | truncatewords: 30 }}
+            </a>
+        </div>
+    {% endfor %}
+</div>

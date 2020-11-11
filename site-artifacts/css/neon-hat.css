@@ -11,6 +11,7 @@
     --heading-text-color: #86c232;
     --highlight-color: #86c232;
     --body-text-color: #d0d2d2;
+    --side-panel-tag-color: #d0d2d2;
 
     /* fonts */
     --body-font-family: Montserrat;
@@ -20,18 +21,19 @@
     --global-container-max-width: 88rem;
     --page-top-margin: 5rem;
     --container-item-horizontal-gap: 1rem;
+    --container-item-vertical-gap: 1rem;
     --panel-padding: 1rem;
-    --panel-border-radius: 1.5rem;
+    --panel-border-radius: 0.5rem;
 
-    /* side Panel Specifics */
+    /* side panel Specifics */
     --side-panel-flex-basis: 20%;
 
     /* toc panel specifics */
-    --toc-panel-flex-basis: 20%;
+    --toc-panel-flex-basis: 15%;
 
     /* main Panel Specifics */
     --post-panel-flex-basis: 60%;
-    --page-panel-flex-basis: 79%;
+    --page-panel-flex-basis: 78%;
 
   }
 
@@ -41,6 +43,7 @@ html {
     background-color: var(--background-page-color);
     color: var(--body-text-color);
     font-family: var(--body-font-family);
+    overflow-y: scroll;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -77,10 +80,21 @@ a:hover, a:focus {
     border-color: pink;
 }
 
+/* panel with global settings */
+
+.panel {
+    padding: var(--panel-padding);
+    margin-top: var(--page-top-margin);
+    border-radius: var(--panel-border-radius);
+    background-color: var(--background-panel-color);
+    margin-bottom: auto;
+}
+
 /* side panel */
 
 .side-panel {
-    flex-basis: var(--side-panel-flex-basis);
+    width: 15rem;
+    flex: 0 0 15rem;
     padding: var(--panel-padding);
     margin-top: var(--page-top-margin);
     border-radius: var(--panel-border-radius);
@@ -94,7 +108,7 @@ a:hover, a:focus {
 }
 
 .side-panel-tag-line {
-    color: #d0d2d2;
+    color: var(--side-panel-tag-color);
     margin-top: 1rem;
     text-align: center;
     font-size: 1.25rem;
@@ -105,65 +119,73 @@ a:hover, a:focus {
     margin-top: 1rem;
     border-top: solid;
     border-bottom: solid;
-    border-color: var(--highlight-color);
-}
-
-.side-panel-contents-item {
-    display: block;
-    line-height: 1.75;
-    text-align: center;
-}
-
-.side-panel-contents-item.current {
     font-weight: bold;
 }
 
 .side-panel-nav.current-page {
     font-weight: bold;
-  }
+}
 
 .side-panel-contacts {
     margin-top: 1rem;
     text-align: center;
 }
 
-
 /* table of contents panel (posts only) */
 
 .toc-panel {
-    flex-basis: var(--toc-panel-flex-basis);
-    padding: var(--panel-padding);
-    margin-top: var(--page-top-margin);
-    border-radius: var(--panel-border-radius);
-    background-color: var(--background-panel-color);
+    width: 15rem;
+    flex: 0 0 15rem;
     color: var(--body-text-color);
 }
 
 /* panel used to display posts (smaller so we can fit toc in) */
 
 .post-panel {
-    flex-basis: var(--post-panel-flex-basis);
-    margin-top: var(--page-top-margin);
-    padding: var(--panel-padding);
+    /* flex: 1; */
     margin-left: var(--container-item-horizontal-gap);
     margin-right: var(--container-item-horizontal-gap);
-    border-radius: var(--panel-border-radius);
-    background-color: var(--background-panel-color);
     color: var(--body-text-color);
 }
 
-/* panel used to display pages */
+/* panel used to display pages - no toc, so wider */
 
 .page-panel {
-    flex-basis: var(--page-panel-flex-basis);
-    margin-top: var(--page-top-margin);
-    padding: var(--panel-padding);
     margin-left: var(--container-item-horizontal-gap);
-    border-radius: var(--panel-border-radius);
-    background-color: var(--background-panel-color);
     color: var(--body-text-color);
 }
 
+/* panel used to display index items on the front page */
+
+.index-list-panel {
+    /* because we're changing the colour of the panel background
+        to match the page (darker) we need to reset padding to
+        0 to align the top of the first index item with
+        the panels otherwise it looks like they've moved down*/
+    background-color: var(--background-page-color);
+    padding-top: 0;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: left;
+}
+
+.index-list-panel-item {
+    border-style: solid;
+    border-color: green;
+    padding: var(--panel-padding);
+    border-radius: var(--panel-border-radius);
+    background-color: var(--background-panel-color);
+    margin-bottom: var(--container-item-vertical-gap);
+
+    color: var(--heading-text-color);
+}
+
+.index-list-panel-item h1 {
+    border-style: solid;
+    border-color: blue;
+    font-size: 125%;
+    color: var(--heading-text-color);
+}
 
 /* Re-arrange top-to-bottom if we're looking on a phone */
 
@@ -175,26 +197,47 @@ a:hover, a:focus {
     }
     .side-panel {
         order: 0;
-        max-width: 100%;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
         margin-top: 0;
-    }
-    .post-panel {
-        margin-top: 1rem;
-        right: auto;
-        order: 1;
+        margin-bottom: 1rem;
+        max-width: 100%;
         width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
     .toc-panel {
-        order: 0;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        order: 1;
         max-width: 100%;
         width: 100%;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 1rem;
+    }
+    .post-panel {
+        right: auto;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        order: 2;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .page-panel {
+        right: auto;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        order: 2;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .index-post-button-panel {
+        right: auto;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        order: 2;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

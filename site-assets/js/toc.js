@@ -15,7 +15,7 @@
         toc_item_link = document.createElement("a")
         toc_item_link.title = headings[i].innerHTML
         toc_item_link.href = baseUrl + '#' + headings[i].id
-        toc_item_link_text = document.createTextNode('* ' + headings[i].innerHTML)
+        toc_item_link_text = document.createTextNode('- ' + headings[i].innerHTML)
         toc_item_link.appendChild(toc_item_link_text)
 
         switch (headings[i].nodeName) {

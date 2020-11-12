@@ -27,9 +27,6 @@
     --panel-padding: 1rem;
     --panel-border-radius: 0.5rem;
 
-    /* index panel specifics */
-    --index-panel-h1-font-size: 1.5rem;
-
     /* side panel Specifics */
     --side-panel-flex-basis: 20%;
 
@@ -38,7 +35,7 @@
 
     /* post panel specifics */
     --post-panel-flex-basis: 60%;
-    --post-panel-h1-font-size: 1.5rem;
+    --post-panel-h1-font-size: 2rem;
 
     /* page panel specifics */
     --page-panel-flex-basis: 78%;
@@ -75,7 +72,6 @@ html {
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font-family);
     margin-top: 0;
-    font-size: 1.5rem;
     color: var(--heading-text-color);
 }
 
@@ -125,15 +121,21 @@ a:hover, a:focus {
 /* panel used to display posts (smaller so we can fit toc in) */
 
 .post-panel {
-    /* flex: 1; */
     margin-left: var(--container-item-horizontal-gap);
     margin-right: var(--container-item-horizontal-gap);
     color: var(--body-text-color);
 }
 
-.post-panel h1 {
-    
-    font-size: var(--post-panel-h1-font-size);
+.post-panel-title {
+    color: var(--highlight-color);
+}
+
+.post-panel-date {
+    display: block;
+    text-align: left;
+    margin-top: -1.0rem;
+    margin-bottom: 1rem;
+
 }
 
 /* side panel */
@@ -187,6 +189,7 @@ a:hover, a:focus {
     width: 15rem;
     color: var(--body-text-color);
     text-align: center;
+    padding: var(--panel-padding);
 }
 
 .toc-panel-item {
@@ -210,10 +213,11 @@ a:hover, a:focus {
 /* panel used to display index items on the front page */
 
 .index-panel {
-    /* because we're changing the colour of the panel background
-        to match the page (darker) we need to reset padding to
-        0 to align the top of the first index item with the other
-        the panels otherwise it looks like they've moved down*/
+
+/*  because we're changing the colour of the panel background
+    to match the page (darker) we need to reset padding to
+    0 to align the top of the first index item with the other
+    the panels otherwise it looks like they've moved down*/
 
     flex: 1;
     background-color: var(--background-page-color);

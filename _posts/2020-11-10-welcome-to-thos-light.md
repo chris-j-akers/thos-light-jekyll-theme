@@ -1,14 +1,11 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "welcome to tho's light"
 date:   2020-11-10 20:25:53 +0000
-categories: jekyll update
 ---
-# Hello!
+## introduction
 
-## Brief Introduction
-
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+Tho's Light is a dark theme for Jekyll, fully compatible with GitHub Pages.
 
 ### Blog post files
 

@@ -35,7 +35,7 @@ If each party uses the same hashing algorithm to build their Merkle Tree and bui
 
 There are reams of information about Merkle Trees available all over the internet, so I'm not going to go into more detail, here. If my attempts at explaining in a few sentences don't cut it for you head to your favourite search engine and read one, or more, of the thousands of articles out there.
  
-## merkle tree: a python implementation
+## a python implementation
 To start with I put together a simple implementation in Python.
 
 ### hashlib

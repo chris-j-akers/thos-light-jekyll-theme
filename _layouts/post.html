@@ -3,7 +3,10 @@ layout: default
 ---
 
 <div class="panel post-panel" id="post">
+    <h1 class="post-panel-title">{{ page.title }}</h1>
+    <span class="post-panel-date">{{ page.date | date_to_string }}</span>
     {{ content }}
 </div>
 
 {% include tocpanel.html %}
+

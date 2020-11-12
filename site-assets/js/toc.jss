@@ -29,9 +29,9 @@
             break
         }
 
-        /* A bit hacky, but we wrapt each link up in a DIV so flexbox orders them correctly,
-           but as it's just a vanilla div, nothing else just add it programatically rather than
-           put it into css, too */
+        /* A bit hacky, but we wrap each link up in a DIV so flexbox orders them correctly,
+           but as it's just a vanilla div, nothing else, just add it programatically rather than
+           put it into css */
            
         toc_item_div = document.createElement('DIV')
         toc_item_div.appendChild(toc_item_link)

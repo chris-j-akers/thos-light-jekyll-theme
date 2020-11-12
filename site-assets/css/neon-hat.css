@@ -190,10 +190,11 @@ a:hover, a:focus {
 
 .toc-panel-item {
     text-align: left;
+    font-weight: bold;
     line-height: 1.5;
     display: block;
-    font-size: 80%;
-    color: var(--highlight-color);
+    font-size: 90%;
+    color: var(--body-text-color);
 }
 
 .toc-panel-item-h2 {
@@ -205,14 +206,14 @@ a:hover, a:focus {
 }
 
 
-
 /* panel used to display index items on the front page */
 
 .index-panel {
     /* because we're changing the colour of the panel background
         to match the page (darker) we need to reset padding to
-        0 to align the top of the first index item with
+        0 to align the top of the first index item with the other
         the panels otherwise it looks like they've moved down*/
+
     flex: 1;
     background-color: var(--background-page-color);
     margin-left: var(--container-item-horizontal-gap);

@@ -65,6 +65,7 @@ background: var(--highlight-color);
 /* basic html stuff */
 
 html {
+    line-height: 1.5rem;
     background-color: var(--background-page-color);
     color: var(--body-text-color);
     font-family: var(--body-font-family);

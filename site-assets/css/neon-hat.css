@@ -180,10 +180,31 @@ a:hover, a:focus {
 /* table of contents panel (posts only) */
 
 .toc-panel {
-    width: 15rem;
     flex: 0 0 15rem;
+    flex-direction: column;
+    align-items: left;
+    width: 15rem;
     color: var(--body-text-color);
+    text-align: center;
 }
+
+.toc-panel-item {
+    text-align: left;
+    line-height: 1.5;
+    display: block;
+    font-size: 80%;
+    color: var(--highlight-color);
+}
+
+.toc-panel-item-h2 {
+    text-indent: 0rem;
+}
+
+.toc-panel-item-h3 {
+    text-indent: 1rem;
+}
+
+
 
 /* panel used to display index items on the front page */
 

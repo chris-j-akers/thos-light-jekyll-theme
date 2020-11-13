@@ -5,15 +5,13 @@
   }
 
 :root {
-
     /* colours */
     --background-panel-color: #2e3337;
     --background-page-color: #222629;
     --heading-text-color: #86c232;
-    --highlight-color: #86c232;
-    --highlight-dark-color: #61892f;
+    --highlight-color: #86c232;     /* Used for smaller artefacts */
     --body-text-color: #d0d2d2;
-    --side-panel-tag-color: #d0d2d2;
+    --side-panel-tag-line-color: #d0d2d2;
 
     /* fonts */
     --body-font-family: Montserrat;
@@ -145,10 +143,6 @@ a:hover, a:focus {
 .side-panel {
     width: 15rem;
     flex: 0 0 15rem;
-    padding: var(--panel-padding);
-    margin-top: var(--page-top-margin);
-    border-radius: var(--panel-border-radius);
-    background-color: var(--background-panel-color);
     text-align: center;
 }
 
@@ -159,18 +153,22 @@ a:hover, a:focus {
 }
 
 .side-panel-tag-line {
-    color: var(--side-panel-tag-color);
+    color: var(--side-panel-tag-line-color);
     margin-top: 1rem;
     text-align: center;
     font-size: 1.25rem;
     font-weight: 300;
 }
 
-.side-panel-contents {
+.side-panel-site-contents {
     margin-top: 1rem;
     border-top: solid;
     border-bottom: solid;
     font-weight: bold;
+}
+
+.side-panel-site-contents-item {
+    font-weight: normal;
 }
 
 .side-panel-nav.current-page {
@@ -211,7 +209,6 @@ a:hover, a:focus {
     text-indent: 1rem;
 }
 
-
 /* panel used to display index items on the front page */
 
 .index-panel {
@@ -237,6 +234,10 @@ a:hover, a:focus {
     border-radius: var(--panel-border-radius);
     background-color: var(--background-panel-color);
     margin-bottom: var(--container-item-vertical-gap);
+}
+
+.index-panel-item a:hover, a:focus {
+    text-decoration: underline;
     color: var(--highlight-color);
 }
 
@@ -245,7 +246,7 @@ a:hover, a:focus {
     padding: 0;
     overflow: hidden; /* clearfix */
     text-align: center;
-  }
+}
   
   /* Pagination items can be `span`s or `a`s */
   

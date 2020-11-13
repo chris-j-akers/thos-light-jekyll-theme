@@ -9,14 +9,14 @@
     <div class="side-panel-tag-line">
         {{ site.tagline }}
     </div>
-    <div class="side-panel-contents">
-        <a class="side-panel-contents-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.url }}{{ site.baseurl }}">home</a>
+    <div class="side-panel-site-contents">
+        <a class="side-panel-site-contents-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.url }}{{ site.baseurl }}">home</a>
         <br>
         {% assign pages_list = site.pages %}
         {% for node in pages_list %}
           {% if node.title != null %}
             {% if node.layout == "page" %}
-              <a class="side-panel-contents-item{% if page.url == node.url %} active{% endif %}" href="{{ site.url }}{{ node.url }}">{{ node.title | downcase }}</a>
+              <a class="side-panel-site-contents-item{% if page.url == node.url %} active{% endif %}" href="{{ site.url }}{{ node.url }}">{{ node.title | downcase }}</a>
               <br>
             {% endif %}
           {% endif %}

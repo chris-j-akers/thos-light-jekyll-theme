@@ -4,13 +4,14 @@ title: home
 ---
 <div class="panel index-panel" >
     {% for post in paginator.posts %}
-        <div class="index-panel-item">
+        <div class="index-panel-item" id="index-panel-item">
             <a href="{{ post.url }}">
                 <h1>
                     {{ post.title }}
                 </h1>
-                {{ post.content | strip_html | truncatewords: 30 }}
             </a>
+            {{ post.content | strip_html | truncatewords: 30 }}
+
         </div>
     {% endfor %}
 

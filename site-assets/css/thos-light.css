@@ -50,11 +50,11 @@
   }
   
 ::-webkit-scrollbar-thumb {
-    background:var(--highlight-dark-color);
+    background:var(--highlight-color);
   }
 
 ::-webkit-scrollbar-thumb:hover {
-background: var(--highlight-color);
+    background: var(--highlight-color);
 }
 
 /* basic html stuff */
@@ -317,6 +317,13 @@ pre code {
 /* Re-arrange top-to-bottom if we're looking on a phone */
 
 @media (max-width: 48rem) {
+    ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent; /* make scrollbar transparent */
+    }
+    html {
+        overflow: scroll; /* Hide scrollbars */
+    }
     .flexbox-container {
         max-width: 48rem;
         align-items: stretch;

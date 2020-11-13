@@ -14,6 +14,11 @@ Tho's Light is a dark theme for Jekyll, fully compatible with GitHub Pages.
 The quick, brown fox jumps over the lazy dog. The quick, brown fox jumps over the lazy dog. The quick, brown fox jumps over the lazy dog. 
 </blockquote>
 
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
+
 ### Blog post files
 
 Jekyll requires blog post files to be named according to the following format:

@@ -10,9 +10,12 @@
     --background-page-color: #222629;
     --heading-text-color: #86c232;
     --highlight-color: #86c232;     /* Used for smaller artefacts */
+    --highlight-color-dark: #62892f;
     --body-text-color: #d0d2d2;
     --side-panel-tag-line-color: #d0d2d2;
     --inline-code-color: #66d9ef;
+    --block-quote-text-color: #9095a0;
+    --block-quote-border-color: #9095a0;
 
     /* fonts */
     --body-font-family: Montserrat;
@@ -20,7 +23,7 @@
 
     /* global Layouts */
     --page-top-margin: 5rem;
-    --global-container-max-width: 88rem;
+    --global-container-max-width: 78rem;
     --container-item-horizontal-gap: 1rem;
     --container-item-vertical-gap: 1rem;
     --panel-padding: 1rem;
@@ -37,7 +40,6 @@
 
     /* page panel specifics */
     --page-panel-flex-basis: 78%;
-
   }
 
 /* Scroll Bar */
@@ -90,6 +92,82 @@ a:hover, a:focus {
     text-decoration: underline;
     font-weight: bold;
 }
+
+abbr {
+    font-size: 85%;
+    font-weight: bold;
+    color: var(--highlight-color);
+    text-transform: uppercase;
+}
+abbr[title] {
+    cursor: help;
+    border-bottom: 1px dotted var(---var(--highlight-color-dark));
+}
+
+  /* Body text */
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+  
+strong {
+    color: var(--highlight-color);
+}
+    
+/* Lists */
+    ul, ol, dl {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+  
+dt {
+    font-weight: bold;
+}
+dd {
+    margin-bottom: .5rem;
+}
+  
+/* Quotes */
+blockquote {
+    font-style: italic;
+    padding: .5rem 1rem;
+    margin: .8rem 0;
+    color: var(--block-quote-text-color);
+    border-left: .25rem solid var(--block-quote-border-color);
+  }
+  blockquote p:last-child {
+    margin-bottom: 0;
+  }
+  @media (min-width: 30em) {
+    blockquote {
+      padding-right: 5rem;
+      padding-left: 1.25rem;
+    }
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    margin: 0 0 1rem;
+    border-radius: var(--panel-border-radius);
+  }
+  
+  /* Tables */
+  table {
+    margin-bottom: 1rem;
+    width: 100%;
+    border: 1px solid var(--body-text-color);
+    border-collapse: collapse;
+  }
+  td,
+  th {
+    padding: .25rem .5rem;
+    border: 1px solid var(--body-text-color);
+  }
+  tbody tr:nth-child(odd) td,
+  tbody tr:nth-child(odd) th {
+    background-color: var(--background-panel-color);
+  }
 
 /* global container */
 
@@ -275,6 +353,16 @@ a:hover, a:focus {
 
 
 /* code */
+
+.highlight {
+    margin-bottom: 1rem;
+
+}
+.highlight pre {
+    margin-bottom: 0;
+    border-radius: var(--panel-border-radius);
+}
+
 
 code,
 pre {

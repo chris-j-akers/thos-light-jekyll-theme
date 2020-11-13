@@ -8,6 +8,12 @@ description: a quick start on the tho's light theme.
 
 Tho's Light is a dark theme for Jekyll, fully compatible with GitHub Pages.
 
+<abbr title="World Health Organization">WHO</abbr> was founded in 1948.
+
+<blockquote>
+The quick, brown fox jumps over the lazy dog. The quick, brown fox jumps over the lazy dog. The quick, brown fox jumps over the lazy dog. 
+</blockquote>
+
 ### Blog post files
 
 Jekyll requires blog post files to be named according to the following format:

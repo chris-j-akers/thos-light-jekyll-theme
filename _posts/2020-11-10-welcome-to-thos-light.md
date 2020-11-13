@@ -2,6 +2,7 @@
 layout: post
 title:  "welcome to tho's light"
 date:   2020-11-10 20:25:53 +0000
+description: a quick start on the tho's light theme.
 ---
 ## introduction
 

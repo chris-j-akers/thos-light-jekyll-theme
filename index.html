@@ -10,7 +10,8 @@ title: home
                     {{ post.title }}
                 </h1>
             </a>
-            {{ post.content | strip_html | truncatewords: 30 }}
+            <span class="pagination-panel-item-date">{{ post.date | date_to_string }}</span>
+            {{ post.description | strip_html }}
 
         </div>
     {% endfor %}

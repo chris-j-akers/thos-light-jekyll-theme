@@ -18,8 +18,8 @@
     --heading-font-family: Montserrat;
 
     /* global Layouts */
-    --global-container-max-width: 88rem;
     --page-top-margin: 5rem;
+    --global-container-max-width: 88rem;
     --container-item-horizontal-gap: 1rem;
     --container-item-vertical-gap: 1rem;
     --panel-padding: 1rem;
@@ -33,7 +33,6 @@
 
     /* post panel specifics */
     --post-panel-flex-basis: 60%;
-    --post-panel-h1-font-size: 2rem;
 
     /* page panel specifics */
     --page-panel-flex-basis: 78%;
@@ -88,6 +87,7 @@ a {
 
 a:hover, a:focus {
     text-decoration: underline;
+    font-weight: bold;
 }
 
 /* global container */
@@ -164,15 +164,10 @@ a:hover, a:focus {
     margin-top: 1rem;
     border-top: solid;
     border-bottom: solid;
-    font-weight: bold;
 }
 
 .side-panel-site-contents-item {
     font-weight: normal;
-}
-
-.side-panel-nav.current-page {
-    font-weight: bold;
 }
 
 .side-panel-contacts {
@@ -194,7 +189,6 @@ a:hover, a:focus {
 
 .toc-panel-item {
     text-align: left;
-    font-weight: bold;
     line-height: 1.5;
     display: block;
     font-size: 90%;
@@ -229,7 +223,7 @@ a:hover, a:focus {
 }
 
 .index-panel-item {
-    height: 7rem;
+    height: auto;
     padding: var(--panel-padding);
     border-radius: var(--panel-border-radius);
     background-color: var(--background-panel-color);
@@ -242,18 +236,18 @@ a:hover, a:focus {
 }
 
 .pagination-panel {
-    margin: 0;
+    margin-top: 2rem;
     padding: 0;
-    overflow: hidden; /* clearfix */
     text-align: center;
+    background-color: var(--background-page-color);
 }
   
   /* Pagination items can be `span`s or `a`s */
   
 .pagination-panel-item {
     float: left;
+    height: auto;
     width: 50%;
-    margin: 0;
     padding: 1rem;
     border-radius: 0.5rem;
     background-color: var(--background-page-color);
@@ -265,12 +259,12 @@ a:hover, a:focus {
     margin-bottom: -1px;
 }
 
-/* Only provide a hover state for linked pagination items */
-
-a.pagination-item:hover {
-    background-color: var(--highlight-dark-color);
+.pagination-panel-item-date {
+    display: block;
+    text-align: left;
+    margin-top: -.5rem;
+    margin-bottom: 1rem;
 }
-
 
 /* Re-arrange top-to-bottom if we're looking on a phone */
 

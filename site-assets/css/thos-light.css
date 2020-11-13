@@ -178,14 +178,20 @@ a:hover, a:focus {
 
 /* table of contents panel (posts only) */
 
-.toc-panel {
-    flex: 0 0 15rem;
-    flex-direction: column;
+.toc-panel-fixed {
+
+    position: fixed;
     align-items: left;
     width: 15rem;
     color: var(--body-text-color);
     text-align: center;
     padding: var(--panel-padding);
+}
+
+.toc-panel-flex {
+    flex: 0 0 15rem;
+    flex-direction: column;
+
 }
 
 .toc-panel-item {
@@ -324,7 +330,8 @@ pre code {
         margin-left: auto;
         margin-right: auto;
     }
-    .toc-panel {
+    .toc-panel-fixed {
+        position: unset;
         margin-top: 0;
         margin-bottom: 1rem;
         order: 1;

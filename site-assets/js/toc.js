@@ -43,9 +43,8 @@
               toc_panel_item_h3_class)
             break
         }
-        /*
-         * Flexibox needs the items wrapped in DIV tags to order them correctly
-        */ 
+        
+         /* Flexibox needs the items wrapped in DIV tags to order them correctly */
         toc_item_div = document.createElement('DIV')
         toc_item_div.appendChild(toc_item_link)
         toc_panel.appendChild(toc_item_div)

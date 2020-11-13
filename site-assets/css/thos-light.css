@@ -127,6 +127,8 @@ a:hover, a:focus {
 }
 
 .post-panel-title {
+    line-height: 2rem;
+    margin-top: -0.25rem;
     color: var(--highlight-color);
 }
 
@@ -324,7 +326,7 @@ a.pagination-item:hover {
         padding: 0;
     }
     .index-panel-item {
-        height: 10rem;
+        height: auto;
         margin-top: 0;
         margin-bottom: 1rem;
         width: 100%;

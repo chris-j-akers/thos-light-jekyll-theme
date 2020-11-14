@@ -419,14 +419,21 @@ pre code {
         margin-left: auto;
         margin-right: auto;
     }
+    .toc-panel-flex {
+        flex: 0 0 0;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        
+    }
     .toc-panel-fixed {
         position: unset;
         margin-top: 0;
-        margin-bottom: 1rem;
+        /* margin-bottom: 1rem; */
         order: 1;
         max-width: 100%;
         width: 100%;
         margin-left: auto;
+        height: auto;
         margin-right: auto;
     } 
     .post-panel {

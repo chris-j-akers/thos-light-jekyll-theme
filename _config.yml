@@ -1,5 +1,5 @@
 markdown:           kramdown
-syntax-rouge-theme: molokai
+syntax-rouge-theme: tomorrow-night
                     # base16.dark
                     # base16.monokai.dark
                     # base16.solarized.dark

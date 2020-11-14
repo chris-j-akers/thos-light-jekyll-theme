@@ -13,7 +13,7 @@
     --highlight-color-dark: #62892f;
     --body-text-color: #d0d2d2;
     --side-panel-tag-line-color: #d0d2d2;
-    --inline-code-color: #66d9ef;
+    --inline-code-color: #b294bb;
     --block-quote-text-color: #9095a0;
     --block-quote-border-color: #9095a0;
 
@@ -358,11 +358,13 @@ tbody tr:nth-child(odd) th {
 
 code,
 pre {
-    font-family: Consolas, Menlo, Monaco, "Courier New", monospace;
+    font-family: Inconsolata;
+    font-weight: bold;
+    /* font-family: Menlo, Consolas, Monaco, "Courier New", monospace; */
 }
 code {
     padding: .25em .5em;
-    font-size: 85%;
+    /* font-size: 85%; */
     color: var(--inline-code-color);
     background-color: #2e3337;
 }
@@ -371,7 +373,7 @@ pre {
     margin-top: 0;
     margin-bottom: 1rem;
     padding: 1rem;
-    font-size: .8rem;
+    font-size: 0.95rem;
     line-height: 1.4;
     white-space: pre;
     white-space: pre-wrap;

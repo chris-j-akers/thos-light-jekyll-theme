@@ -245,9 +245,14 @@ tbody tr:nth-child(odd) th {
     text-align: center;
 }
 
+.side-panel-title {
+    margin-top: -.25rem;
+}
+
 .side-panel-title h1 a {
     text-align: center;
     font-size: 2rem;
+    line-height: 2rem;
     color: var(--heading-text-color);
 }
 

@@ -1,189 +1,203 @@
 ---
 layout: post
-title: introducing tho's light jekyll theme
+title: welcome to tho's light
+description: introducing tho's light jekyll theme
+author: cakers
 ---
+## introduction
 
-## Introduction
+Tho's Light is a [Jekyll](http://jekyllrb.com) theme that places content centrally, with a simple sidebar to the left and (for posts) a clickable table of contents fixed to the right.
 
-Tho's Light is a [Jekyll](http://jekyllrb.com) theme that places content centrally with a simple sidebar to the left and (for posts) a clickable table of contents fixed to the right.
+Tho's Light was developed specifically for [In Pursuit of his Own Hat](https://inpursuitofhisownhat.github.io), a blog about technically faffing.
 
-## Phone Screen Widths
+## customising
 
-If using on a tablet or phone the screens will switch to a top-down format. The minimum width for this is set in the [thos-hat.css](link) file at the bottom with the main `media` query.
+Although the whole theme can be customised with knowledge of CSS, some sections are easier to customise than others because their configuration is set using CSS variables at the top of the [thos-hat.css]({{ site.url }}{{ site.baseurl }}site-assets/css/thos-light.css) file.
 
-## Customising
+### colours
 
-Although the whole theme can be customised with knowledge of CSS, some sections are easier to customise than others because their configuration is set using CSS variables at the top of the [thos-hat.css](link) file.
+```css
+--background-panel-color: #2e3337;
+--background-page-color: #222629;
+--heading-text-color: #86c232;
+--highlight-color: #86c232;
+--highlight-color-dark: #62892f;
+--body-text-color: #d0d2d2;
+--side-panel-tag-line-color: #d0d2d2;
+--inline-code-color: #b294bb;
+--block-quote-text-color: #9095a0;
+--block-quote-border-color: #9095a0;
+```
 
-* Colours
-* Global Font 
-  * The default is Montserrat from Google Fonts. If you want to add a different font you will probably need to adjust the link found in `head.html` include file 
-* Default layout (Flex Box)
+### font
+  
+  The default is Montserrat from Google Fonts. If you want to add a different font you will probably need to adjust the link found in `head.html` include file
 
-## Sidebar
+  ```html
+  <link rel="stylesheet" 
+   href="https://fonts.googleapis.com/css?family=Montserrat:400,400italic,700|Inconsolata:400,400">
+  ```
 
-The sidebar contains four sections:
+## sidebar
 
-* Title
-  * Configurable in config.yaml
-* Tagline 
-  * Configurable in config.yaml
-* Navigable list of pages in site
-  * Builds automatically from all site pages based on the 'page' layout
-* Contact links
-  * Based on information in config.yaml
-  * Although these are plain text by default, they can easily be changed to font-awesome icons by editing the sidebar.html include file and adding the necessary references to the head.html include.
+The sidebar contains four sections.
 
-## Table of Contents
+<dl>
+  <dt>title</dt>
+  <dd>Configurable in <code>_config.yml</code></dd>
 
-For pages that display posts a table of contents panel will appear to the right. This panel will remain fixed in position as the page scrolls down.
+  <dt>tagline</dt>
+  <dd>Configurable in <code>_config.yml</code></dd>
 
-The contents are built using a small JavaScript which scans the post for all `H2` and `H3` tags and builds the relevant links.
+  <dt>navigable list of pages in site</dt>
+  <dd>Builds automatically from all site pages based on the <code>page</code> layout</dd>
 
-The indents and formats are set using the relevant CSS classes in [thos-hat.css](link).
+  <dt>contact links</dt>
+  <dd>Based on information in <code>_config.yml</code> (email, github, linkedin) </dd>
+  <dd>Although these are plain text by default, they can easily be changed to font-awesome icons by editing the <code>sidebar.html</code> include file and adding the necessary references to the <code>head.html</code> include.</dd>
+</dl>
 
+## table of contents
 
-### Hyde features
+For pages using the `post` layout a table of contents panel will appear to the right. This panel will remain fixed in position as the page scrolls down.
 
-In addition to the features of Poole, Hyde adds the following:
+Contents are built using a small JavaScript  which scans the post for all `H2` and `H3` tags and builds the relevant links: [toc.js]({{ site.url }}{{ site.baseurl }}site-assets/js/toc.js)
 
-* Sidebar includes support for textual modules and a dynamically generated navigation with active link support
-* Two orientations for content and sidebar, default (left sidebar) and [reverse](https://github.com/poole/lanyon#reverse-layout) (right sidebar), available via `<body>` classes
-* [Eight optional color schemes](https://github.com/poole/hyde#themes), available via `<body>` classes
+The indents and formats are set using the relevant CSS classes in [thos-hat.css]({{ site.url }}{{ site.baseurl }}site-assets/css/thos-light.css).
 
-[Head to the readme](https://github.com/poole/hyde#readme) to learn more.
+## phone screens
 
-### Browser support
+If viewing on a narrow tablet or phone the layout will switch to a top-down format. 
+
+The minimum width for this is set at the bottom of [thos-hat.css]({{ site.url }}{{ site.baseurl }}site-assets/css/thos-light.css).
+
+```css
+@media (max-width: 48rem) {
+    ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent; /* make scrollbar transparent */
+    }
+    html {
+        overflow: scroll; /* Hide scrollbars */
+    }
+    .flexbox-container {
+        max-width: 48rem;
+    ...
+    ...
+    ...
+```
+
+## browser support
 
 The theme has been created only with modern browsers in mind and very little consideration for older ones, so if you want something that will run on IE 5.5 you're out of luck.
 
-### Download
+## more examples
 
-Head to the <a href="https://github.com/poole/hyde">GitHub repository</a> for downloads, bug reports, and features requests.
-
-## Example Content
+### pop-out
 
 <div class="pop-out">
   Here, the text has been formatted using the `pop-out` class which allows you to highlight important points in your text.
 </div>
 
-Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. *Aenean eu leo quam.* Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
+### block-quote
 
-> Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
+> “There are very few moments in a man's existence when he experiences so much ludicrous distress, or meets with so little charitable commiseration, as when he is in pursuit of his own hat.”
 
-Etiam porta **sem malesuada magna** mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
+### html
 
-## Inline HTML elements
-
-HTML defines a long list of available inline tags, a complete list of which can be found on the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
-
-- **To bold text**, use `<strong>`.
-- *To italicize text*, use `<em>`.
-- Abbreviations, like <abbr title="HyperText Markup Langage">HTML</abbr> should use `<abbr>`, with an optional `title` attribute for the full phrase.
-- Citations, like <cite>&mdash; Mark otto</cite>, should use `<cite>`.
-- <del>Deleted</del> text should use `<del>` and <ins>inserted</ins> text should use `<ins>`.
+- **bold text**, use `<strong>`.
+- *italics*, use `<em>`.
+- Abbreviations, like <abbr title="HyperText Markup Langage">HTML</abbr> should use `<abbr>` tag.
+- Citations, like <cite>&mdash; Charles Dickens</cite>, should use `<cite>`.
+- <del>Strikethrough text</del>
 - Superscript <sup>text</sup> uses `<sup>` and subscript <sub>text</sub> uses `<sub>`.
 
-Most of these elements are styled by browsers with few modifications on our part.
+## code blocks
 
-## Heading
+Code is displayed using the default [Tomorrow Night](https://github.com/chriskempson/tomorrow-theme) theme by Chris Kempson, but a number of other themes have been included and these can be set in the `_config.yml` file.
 
-Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+```yaml
+syntax-rouge-theme: tomorrow-night
+                    # base16.dark
+                    # base16.monokai.dark
+                    # base16.solarized.dark
+                    # gruvbox.dark
+                    # molokai
+                    # monokai
+                    # thankful_eyes
+                    # tulip
+```
 
-### Code
+### c
 
-Cum sociis natoque penatibus et magnis dis `code element` montes, nascetur ridiculus mus.
+```c
+#include <stdio.h>
 
-{% highlight js %}
-// Example can be run directly in your JavaScript console
+void main(int argc, char** argv) {
+  
+  /* Let's say hello to everyone */
+  printf("Hello World!");
 
-// Create a function that takes two arguments and returns the sum of those arguments
-var adder = new Function("a", "b", "return a + b");
+}
+```
+### python
+```python
+def hello_world():
+  return "Hello World\n"
 
-// Call the function
-adder(2, 6);
-// > 8
-{% endhighlight %}
+# Now run the function
+if __name__ == "__main__":
+  print(hello_world())
+```
+## images
 
-Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.
+Can be adjusted in [thos-hat.css]({{ site.url }}{{ site.baseurl }}site-assets/css/thos-light.css) by modifying the `img` tag.
 
-### Lists
+![placeholder](http://placehold.it/800x400 "Large")
+![placeholder](http://placehold.it/400x200 "Medium")
+![placeholder](http://placehold.it/200x200 "Small")
 
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+## tables
 
-* Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-* Donec id elit non mi porta gravida at eget metus.
-* Nulla vitae elit libero, a pharetra augue.
-
-Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.
-
-1. Vestibulum id ligula porta felis euismod semper.
-2. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-3. Maecenas sed diam eget risus varius blandit sit amet non magna.
-
-Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.
-
-<dl>
-  <dt>HyperText Markup Language (HTML)</dt>
-  <dd>The language used to describe and define the content of a Web page</dd>
-
-  <dt>Cascading Style Sheets (CSS)</dt>
-  <dd>Used to describe the appearance of Web content</dd>
-
-  <dt>JavaScript (JS)</dt>
-  <dd>The programming language used to build advanced Web sites and applications</dd>
-</dl>
-
-Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.
-
-### Images
-
-Quisque consequat sapien eget quam rhoncus, sit amet laoreet diam tempus. Aliquam aliquam metus erat, a pulvinar turpis suscipit at.
-
-![placeholder](http://placehold.it/800x400 "Large example image")
-![placeholder](http://placehold.it/400x200 "Medium example image")
-![placeholder](http://placehold.it/200x200 "Small example image")
-
-### Tables
-
-Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Use standard HTML or markdown style for tables.
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Upvotes</th>
-      <th>Downvotes</th>
+      <th>band member</th>
+      <th>sing</th>
+      <th>play guitar</th>
+      <th>play drums</th>
     </tr>
   </thead>
-  <tfoot>
-    <tr>
-      <td>Totals</td>
-      <td>21</td>
-      <td>23</td>
-    </tr>
-  </tfoot>
   <tbody>
     <tr>
-      <td>Alice</td>
-      <td>10</td>
-      <td>11</td>
+      <td>john</td>
+      <td>yes</td>
+      <td>yes</td>
+      <td>no</td>
     </tr>
     <tr>
-      <td>Bob</td>
-      <td>4</td>
-      <td>3</td>
+      <td>paul</td>
+      <td>yes</td>
+      <td>yes</td>
+      <td>no</td>
     </tr>
     <tr>
-      <td>Charlie</td>
-      <td>7</td>
-      <td>9</td>
+      <td>george</td>
+      <td>yes</td>
+      <td>yes</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <td>ringo</td>
+      <td>yes</td>
+      <td>yes</td>
+      <td>no</td>
     </tr>
   </tbody>
 </table>
 
-Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.
+## download the theme
 
------
-
-Want to see something else added? <a href="https://github.com/poole/poole/issues/new">Open an issue.</a>
+The theme can be downloaded at the <a href="https://github.com/inpursuitofhisownhat/thos-light">GitHub repository</a>

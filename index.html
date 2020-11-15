@@ -10,7 +10,7 @@ title: home
                     {{ post.title }}
                 </h1>
             </a>
-            <span class="index-panel-item-date">{{ post.date | date_to_string }}</span>
+            <span class="index-panel-item-date">{{ post.date | date_to_string }} | by {{ post.author }}</span>
             {{ post.description | strip_html }}
 
         </div>

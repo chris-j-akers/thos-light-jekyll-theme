@@ -13,9 +13,9 @@
     --highlight-color-dark: #62892f;
     --body-text-color: #d0d2d2;
     --side-panel-tag-line-color: #d0d2d2;
-    --inline-code-color: #b294bb;
-    --block-quote-text-color: #9095a0;
-    --block-quote-border-color: #9095a0;
+    --inline-code-color: #cc6666;
+    --block-quote-text-color: #d0d2d2;
+    --block-quote-border-color: #d0d2d2;
 
     /* fonts */
     --body-font-family: Montserrat;
@@ -40,6 +40,7 @@
 
     /* page panel specifics */
     --page-panel-flex-basis: 78%;
+
   }
 
 /* Scroll Bar */
@@ -75,6 +76,20 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--heading-text-color);
 }
 
+h2 {
+    margin-top: 2rem;
+    border-color: var(--highlight-color);
+    border-bottom-style: solid;
+    border-width: 2px;
+    padding: 4px;
+}
+
+/* h3, h4, h5, h5 {
+    font-family: var(--heading-font-family);
+    margin-top: 0;
+    color: var(--body-text-color);
+} */
+
 hr {
     position: relative;
     margin: 1.5rem 0;
@@ -85,7 +100,7 @@ hr {
 
 a {
     color: var(--body-text-color);
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 a:hover, a:focus {
@@ -109,22 +124,23 @@ p {
     margin-top: 0;
     margin-bottom: 1rem;
 }
-  
-strong {
-    color: var(--highlight-color);
-}
     
 /* Lists */
     ul, ol, dl {
     margin-top: 0;
     margin-bottom: 1rem;
+    padding-left: 1rem;
 }
-  
+
 dt {
     font-weight: bold;
 }
 dd {
     margin-bottom: .5rem;
+}
+
+strong {
+    font-weight: bold;
 }
   
 /* Quotes */
@@ -163,6 +179,15 @@ tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {
     background-color: var(--background-panel-color);
 }
+
+.pop-out {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    color: var(--body-text-color);
+    background-color:var(--background-page-color);
+    border-style: solid;
+    border-color: var(--highlight-color-dark)
+  }
 
 /* global container */
 
@@ -251,8 +276,15 @@ tbody tr:nth-child(odd) th {
 
 /* table of contents panel (posts only) */
 
-.toc-panel-fixed {
+/* we wrap the actual panel in a flex panel. This is so we can fix the location of
+ * the panel but also have it scroll with the contents */
 
+.toc-panel-flex {
+    flex: 0 0 15rem;
+    flex-direction: column;
+}
+
+.toc-panel-fixed {
     position: fixed;
     align-items: left;
     width: 15rem;
@@ -261,9 +293,13 @@ tbody tr:nth-child(odd) th {
     padding: var(--panel-padding);
 }
 
-.toc-panel-flex {
-    flex: 0 0 15rem;
-    flex-direction: column;
+.toc-panel-fixed a {
+    text-decoration: none;
+}
+
+.toc-panel-fixed h2 {
+    border-style: none;
+    margin-top: 0;
 }
 
 .toc-panel-item {
@@ -307,6 +343,10 @@ tbody tr:nth-child(odd) th {
     border-radius: var(--panel-border-radius);
     background-color: var(--background-panel-color);
     margin-bottom: var(--container-item-vertical-gap);
+}
+
+.index-panel-item a {
+    text-decoration: none;
 }
 
 .index-panel-item a:hover, a:focus {

@@ -16,6 +16,10 @@ Although the whole theme can be customised with knowledge of CSS, some sections 
 
 ### colours
 
+![]({{ site.url }}{{ site.baseurl }}site-assets/images/2020-11-10-configurable-colours.png)
+
+All colours are variables and defined at the top of [thos-hat.css]({{ site.url }}{{ site.baseurl }}site-assets/css/thos-light.css).
+
 ```css
 --background-panel-color: #2e3337;
 --background-page-color: #222629;
@@ -31,7 +35,7 @@ Although the whole theme can be customised with knowledge of CSS, some sections 
 
 ### font
   
-  The default is Montserrat from Google Fonts. If you want to add a different font you will probably need to adjust the link found in `head.html` include file
+The default fonts are [Montserrat](https://fonts.google.com/specimen/Montserrat) for the body and bolded [Inconsolata](https://fonts.google.com/specimen/Inconsolata) for code. Both are freely available from Google Fonts. If you want to add a different font you will need to adjust the link found in `_includes/head.html`.
 
   ```html
   <link rel="stylesheet" 
@@ -69,22 +73,10 @@ The indents and formats are set using the relevant CSS classes in [thos-hat.css]
 
 If viewing on a narrow tablet or phone the layout will switch to a top-down format. 
 
-The minimum width for this is set at the bottom of [thos-hat.css]({{ site.url }}{{ site.baseurl }}site-assets/css/thos-light.css).
+The max width for this setting is set at the bottom of [thos-hat.css]({{ site.url }}{{ site.baseurl }}site-assets/css/thos-light.css).
 
 ```css
-@media (max-width: 48rem) {
-    ::-webkit-scrollbar {
-        width: 0px;
-        background: transparent; /* make scrollbar transparent */
-    }
-    html {
-        overflow: scroll; /* Hide scrollbars */
-    }
-    .flexbox-container {
-        max-width: 48rem;
-    ...
-    ...
-    ...
+@media (max-width: 68rem)
 ```
 
 ## browser support
@@ -136,6 +128,7 @@ syntax-rouge-theme: tomorrow-night
 void main(int argc, char** argv) {
   
   /* Let's say hello to everyone */
+
   printf("Hello World!");
 
 }

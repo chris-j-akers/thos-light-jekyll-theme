@@ -1,4 +1,5 @@
 markdown:           kramdown
+                    
 syntax-rouge-theme: tomorrow-night
                     # base16.dark
                     # base16.monokai.dark
@@ -15,9 +16,9 @@ tagline:            short and sweet
 email:              your-email@example.com
 linkedin:           https://www.linkedin.com
 github:             https://github.com
-baseurl: /
-url:  
-paginate: 5
+baseurl:            /
+url:                # insert your website url, here
+paginate:           5
 
 plugins:
-  - jekyll-paginate
+                    - jekyll-paginate

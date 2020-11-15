@@ -1,20 +1,47 @@
 ---
 layout: post
-title: Introducing Hyde
+title: introducing tho's light jekyll theme
 ---
 
-Hyde is a brazen two-column [Jekyll](http://jekyllrb.com) theme that pairs a prominent sidebar with uncomplicated content. It's based on [Poole](http://getpoole.com), the Jekyll butler.
+## Introduction
 
-### Built on Poole
+Tho's Light is a [Jekyll](http://jekyllrb.com) theme that places content centrally with a simple sidebar to the left and (for posts) a clickable table of contents fixed to the right.
 
-Poole is the Jekyll Butler, serving as an upstanding and effective foundation for Jekyll themes by [@mdo](https://twitter.com/mdo). Poole, and every theme built on it (like Hyde here) includes the following:
+## Phone Screen Widths
 
-* Complete Jekyll setup included (layouts, config, [404](/404), [RSS feed](/atom.xml), posts, and [example page](/about))
-* Mobile friendly design and development
-* Easily scalable text and component sizing with `rem` units in the CSS
-* Support for a wide gamut of HTML elements
-* Related posts (time-based, because Jekyll) below each post
-* Syntax highlighting, courtesy Pygments (the Python-based code snippet highlighter)
+If using on a tablet or phone the screens will switch to a top-down format. The minimum width for this is set in the [thos-hat.css](link) file at the bottom with the main `media` query.
+
+## Customising
+
+Although the whole theme can be customised with knowledge of CSS, some sections are easier to customise than others because their configuration is set using CSS variables at the top of the [thos-hat.css](link) file.
+
+* Colours
+* Global Font 
+  * The default is Montserrat from Google Fonts. If you want to add a different font you will probably need to adjust the link found in `head.html` include file 
+* Default layout (Flex Box)
+
+## Sidebar
+
+The sidebar contains four sections:
+
+* Title
+  * Configurable in config.yaml
+* Tagline 
+  * Configurable in config.yaml
+* Navigable list of pages in site
+  * Builds automatically from all site pages based on the 'page' layout
+* Contact links
+  * Based on information in config.yaml
+  * Although these are plain text by default, they can easily be changed to font-awesome icons by editing the sidebar.html include file and adding the necessary references to the head.html include.
+
+## Table of Contents
+
+For pages that display posts a table of contents panel will appear to the right. This panel will remain fixed in position as the page scrolls down.
+
+The contents are built using a small JavaScript which scans the post for all `H2` and `H3` tags and builds the relevant links.
+
+The indents and formats are set using the relevant CSS classes in [thos-hat.css](link).
+
 
 ### Hyde features
 
@@ -28,23 +55,16 @@ In addition to the features of Poole, Hyde adds the following:
 
 ### Browser support
 
-Hyde is by preference a forward-thinking project. In addition to the latest versions of Chrome, Safari (mobile and desktop), and Firefox, it is only compatible with Internet Explorer 9 and above.
+The theme has been created only with modern browsers in mind and very little consideration for older ones, so if you want something that will run on IE 5.5 you're out of luck.
 
 ### Download
 
-Hyde is developed on and hosted with GitHub. Head to the <a href="https://github.com/poole/hyde">GitHub repository</a> for downloads, bug reports, and features requests.
+Head to the <a href="https://github.com/poole/hyde">GitHub repository</a> for downloads, bug reports, and features requests.
 
-Thanks!
+## Example Content
 
-
----
-layout: post
-title: Example content
----
-
-
-<div class="message">
-  Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
+<div class="pop-out">
+  Here, the text has been formatted using the `pop-out` class which allows you to highlight important points in your text.
 </div>
 
 Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. *Aenean eu leo quam.* Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.

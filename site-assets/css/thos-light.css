@@ -232,7 +232,7 @@ tbody tr:nth-child(odd) th {
 .post-panel-date {
     display: block;
     text-align: left;
-    margin-top: -1.0rem;
+    margin-top: -0.75rem;
     margin-bottom: 1rem;
 
 }

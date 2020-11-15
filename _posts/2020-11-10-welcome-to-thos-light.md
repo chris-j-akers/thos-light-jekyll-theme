@@ -1,82 +1,169 @@
 ---
 layout: post
-title:  "welcome to tho's light"
-date:   2020-11-10 20:25:53 +0000
-description: a quick start on the tho's light theme.
+title: Introducing Hyde
 ---
-## introduction
 
-Tho's Light is a dark theme for Jekyll.
+Hyde is a brazen two-column [Jekyll](http://jekyllrb.com) theme that pairs a prominent sidebar with uncomplicated content. It's based on [Poole](http://getpoole.com), the Jekyll butler.
 
-It uses few colours (aside from the syntax highlighters), all of which can be modified by adjusting the variables at the top of the css file:
+### Built on Poole
 
-```css
-    /* colours */
-    --background-panel-color: #2e3337;
-    --background-page-color: #222629;
-    --heading-text-color: #86c232;
-    --highlight-color: #86c232;     /* Used for smaller artefacts */
-    --highlight-color-dark: #62892f;
-    --body-text-color: #d0d2d2;
-    --side-panel-tag-line-color: #d0d2d2;
-    --inline-code-color: #b294bb;
-    --block-quote-text-color: #9095a0;
-    --block-quote-border-color: #9095a0;
-```
+Poole is the Jekyll Butler, serving as an upstanding and effective foundation for Jekyll themes by [@mdo](https://twitter.com/mdo). Poole, and every theme built on it (like Hyde here) includes the following:
 
-The font used throughout is Montserrat, freely available from google fonts. It can also be changed by editing the variables at the top of the CSS file.
+* Complete Jekyll setup included (layouts, config, [404](/404), [RSS feed](/atom.xml), posts, and [example page](/about))
+* Mobile friendly design and development
+* Easily scalable text and component sizing with `rem` units in the CSS
+* Support for a wide gamut of HTML elements
+* Related posts (time-based, because Jekyll) below each post
+* Syntax highlighting, courtesy Pygments (the Python-based code snippet highlighter)
 
-```css
-    /* fonts */
-    --body-font-family: Montserrat;
-    --heading-font-family: Montserrat;
-```
+### Hyde features
 
-## table of contents
-For posts only, an automatically generated table of contents sits to the right which follows you down as you read.
+In addition to the features of Poole, Hyde adds the following:
 
-## formatting examples
+* Sidebar includes support for textual modules and a dynamically generated navigation with active link support
+* Two orientations for content and sidebar, default (left sidebar) and [reverse](https://github.com/poole/lanyon#reverse-layout) (right sidebar), available via `<body>` classes
+* [Eight optional color schemes](https://github.com/poole/hyde#themes), available via `<body>` classes
 
-Below are some examples of html tags used in the theme. All can be modified and more can be added by changing the css file.
+[Head to the readme](https://github.com/poole/hyde#readme) to learn more.
 
-### block quote
+### Browser support
 
-<blockquote>
-The quick, brown fox jumps over the lazy dog. The quick, brown fox jumps over the lazy dog. The quick, brown fox jumps over the lazy dog. 
-</blockquote>
+Hyde is by preference a forward-thinking project. In addition to the latest versions of Chrome, Safari (mobile and desktop), and Firefox, it is only compatible with Internet Explorer 9 and above.
 
-### abbreviations
+### Download
 
-The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.
+Hyde is developed on and hosted with GitHub. Head to the <a href="https://github.com/poole/hyde">GitHub repository</a> for downloads, bug reports, and features requests.
 
-### tables
-
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
+Thanks!
 
 
-### inline code
+---
+layout: post
+title: Example content
+---
 
-Some say `goto` is a dangerous command.
 
-## code snippets
+<div class="message">
+  Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
+</div>
 
-### c
+Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. *Aenean eu leo quam.* Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
 
-```c
-#include <stdio.h>
+> Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
 
-void main() {
+Etiam porta **sem malesuada magna** mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
 
-  printf("Hello World!\n");
+## Inline HTML elements
 
-}
-```
+HTML defines a long list of available inline tags, a complete list of which can be found on the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
 
-### python
+- **To bold text**, use `<strong>`.
+- *To italicize text*, use `<em>`.
+- Abbreviations, like <abbr title="HyperText Markup Langage">HTML</abbr> should use `<abbr>`, with an optional `title` attribute for the full phrase.
+- Citations, like <cite>&mdash; Mark otto</cite>, should use `<cite>`.
+- <del>Deleted</del> text should use `<del>` and <ins>inserted</ins> text should use `<ins>`.
+- Superscript <sup>text</sup> uses `<sup>` and subscript <sub>text</sub> uses `<sub>`.
 
-```python
-print("Hello World!")
-```
+Most of these elements are styled by browsers with few modifications on our part.
+
+## Heading
+
+Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+
+### Code
+
+Cum sociis natoque penatibus et magnis dis `code element` montes, nascetur ridiculus mus.
+
+{% highlight js %}
+// Example can be run directly in your JavaScript console
+
+// Create a function that takes two arguments and returns the sum of those arguments
+var adder = new Function("a", "b", "return a + b");
+
+// Call the function
+adder(2, 6);
+// > 8
+{% endhighlight %}
+
+Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.
+
+### Lists
+
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+
+* Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+* Donec id elit non mi porta gravida at eget metus.
+* Nulla vitae elit libero, a pharetra augue.
+
+Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.
+
+1. Vestibulum id ligula porta felis euismod semper.
+2. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+3. Maecenas sed diam eget risus varius blandit sit amet non magna.
+
+Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.
+
+<dl>
+  <dt>HyperText Markup Language (HTML)</dt>
+  <dd>The language used to describe and define the content of a Web page</dd>
+
+  <dt>Cascading Style Sheets (CSS)</dt>
+  <dd>Used to describe the appearance of Web content</dd>
+
+  <dt>JavaScript (JS)</dt>
+  <dd>The programming language used to build advanced Web sites and applications</dd>
+</dl>
+
+Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.
+
+### Images
+
+Quisque consequat sapien eget quam rhoncus, sit amet laoreet diam tempus. Aliquam aliquam metus erat, a pulvinar turpis suscipit at.
+
+![placeholder](http://placehold.it/800x400 "Large example image")
+![placeholder](http://placehold.it/400x200 "Medium example image")
+![placeholder](http://placehold.it/200x200 "Small example image")
+
+### Tables
+
+Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Upvotes</th>
+      <th>Downvotes</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>Totals</td>
+      <td>21</td>
+      <td>23</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>Alice</td>
+      <td>10</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>Bob</td>
+      <td>4</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>Charlie</td>
+      <td>7</td>
+      <td>9</td>
+    </tr>
+  </tbody>
+</table>
+
+Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.
+
+-----
+
+Want to see something else added? <a href="https://github.com/poole/poole/issues/new">Open an issue.</a>

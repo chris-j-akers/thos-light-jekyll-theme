@@ -153,9 +153,9 @@ if __name__ == "__main__":
 
 Can be adjusted in [thos-hat.css]({{ site.url }}{{ site.baseurl }}site-assets/css/thos-light.css) by modifying the `img` tag.
 
-![placeholder](http://placehold.it/800x400 "Large")
-![placeholder](http://placehold.it/400x200 "Medium")
-![placeholder](http://placehold.it/200x200 "Small")
+![placeholder](https://placehold.it/800x400 "Large")
+![placeholder](https://placehold.it/400x200 "Medium")
+![placeholder](https://placehold.it/200x200 "Small")
 
 ## tables
 

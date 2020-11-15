@@ -439,7 +439,7 @@ pre code {
 
 /* Re-arrange top-to-bottom if we're looking on a phone */
 
-@media (max-width: 48rem) {
+@media (max-width: 68rem) {
     ::-webkit-scrollbar {
         width: 0px;
         background: transparent; /* make scrollbar transparent */
@@ -448,7 +448,7 @@ pre code {
         overflow: scroll; /* Hide scrollbars */
     }
     .flexbox-container {
-        max-width: 48rem;
+        max-width: 58rem;
         align-items: stretch;
         flex-direction: column;
     }

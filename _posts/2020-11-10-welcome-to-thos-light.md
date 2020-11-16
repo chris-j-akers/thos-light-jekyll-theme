@@ -12,7 +12,7 @@ Tho's Light is a [Jekyll](http://jekyllrb.com) theme that, by default, places co
 
 If the screen is narrow (i.e. viewing on a phone) then content is re-stacked vertically for easier reading.
 
-<img src="{{ site.url }}{{ site.baseurl }}site-assets/images/2020-11-10-blog-post-example-phone.png" style="text-align: center; width: 60%; height: 800px; margin-left: 20%; margin-right: 20%;" />
+<img src="{{ site.url }}{{ site.baseurl }}site-assets/images/2020-11-10-blog-post-example-phone-small.png" style="text-align: center; width: 60%; margin-left: 20%; margin-right: 20%;" />
 \
 Tho's Light was developed specifically for [In Pursuit of his Own Hat](https://inpursuitofhisownhat.github.io).
 

@@ -6,7 +6,7 @@ Tho's Light is a [Jekyll](http://jekyllrb.com) theme that, by default, places co
 
 <img src="site-assets/images/2020-11-10-blog-post-example.png" />
 
-If the screen is narrow (i.e. viewing on a phone) then content is re-stacked vertically for easier reading.
+If the screen is narrow (i.e. viewing on a phone or portrait-oriented tablet) then content is re-stacked vertically for easier reading.
 
 <img src="site-assets/images/2020-11-10-blog-post-example-phone-small.png" style="text-align: center; margin-left: 32%;" />
 

@@ -2,7 +2,7 @@
 
 ## introduction
 
-Tho's Light is a [Jekyll](http://jekyllrb.com) theme that, by default, places content centrally with a simple sidebar to the left and (for posts) a clickable table of contents fixed to the right. 
+Tho's Light is a [Jekyll](http://jekyllrb.com) theme that, by default, places content centrally with a simple sidebar to the left and (for posts) a navigable table of contents that scrolls down with the main panel.
 
 <img src="site-assets/images/2020-11-10-blog-post-example.png" />
 

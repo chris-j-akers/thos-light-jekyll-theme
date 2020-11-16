@@ -6,19 +6,19 @@ author: cakers
 ---
 ## introduction
 
-Tho's Light is a [Jekyll](http://jekyllrb.com) theme that places content centrally, with a simple sidebar to the left and (for posts) a clickable table of contents fixed to the right.
+Tho's Light is a [Jekyll](http://jekyllrb.com) theme that, by default, places content centrally with a simple sidebar to the left and (for posts) a clickable table of contents fixed to the right. If the screen is narrow (i.e. viewing on a phone) then content is re-stacked vertically for easier reading.
 
-Tho's Light was developed specifically for [In Pursuit of his Own Hat](https://inpursuitofhisownhat.github.io), a blog about technically faffing.
+Tho's Light was developed specifically for [In Pursuit of his Own Hat](https://inpursuitofhisownhat.github.io).
 
 ## customising
 
-Although the whole theme can be customised with knowledge of CSS, some sections are easier to customise than others because their configuration is set using CSS variables at the top of the [thos-hat.css]({{ site.url }}{{ site.baseurl }}site-assets/css/thos-light.css) file.
+Although the whole theme can be customised with some knowledge of CSS, some sections are easier to customise than others because they're configured with CSS variables at the top of the [thos-hat.css]({{ site.url }}{{ site.baseurl }}site-assets/css/thos-light.css) file.
 
 ### colours
 
 ![]({{ site.url }}{{ site.baseurl }}site-assets/images/2020-11-10-configurable-colours.png)
 
-All colours are variables and defined at the top of [thos-hat.css]({{ site.url }}{{ site.baseurl }}site-assets/css/thos-light.css).
+All colour variables are defined at the top of [thos-hat.css]({{ site.url }}{{ site.baseurl }}site-assets/css/thos-light.css).
 
 ```css
 --background-panel-color: #2e3337;
@@ -65,7 +65,7 @@ The sidebar contains four sections.
 
 For pages using the `post` layout a table of contents panel will appear to the right. This panel will remain fixed in position as the page scrolls down.
 
-Contents are built using a small JavaScript  which scans the post for all `H2` and `H3` tags and builds the relevant links: [toc.js]({{ site.url }}{{ site.baseurl }}site-assets/js/toc.js)
+Contents are built automatically using a small JavaScript  which scans the post for all `H2` and `H3` tags and builds the relevant links: [toc.js]({{ site.url }}{{ site.baseurl }}site-assets/js/toc.js)
 
 The indents and formats are set using the relevant CSS classes in [thos-hat.css]({{ site.url }}{{ site.baseurl }}site-assets/css/thos-light.css).
 
@@ -136,10 +136,12 @@ void main(int argc, char** argv) {
 ### python
 ```python
 def hello_world():
+
   return "Hello World\n"
 
 # Now run the function
 if __name__ == "__main__":
+
   print(hello_world())
 ```
 ## images

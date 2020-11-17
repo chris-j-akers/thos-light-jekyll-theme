@@ -1,7 +1,7 @@
 ---
 layout: post
-title: welcome to tho's light
-description: introducing tho's light jekyll theme
+title: "tho's light: a jekyll theme"
+description: an overview of the 'tho's light' jekyll theme
 author: cakers
 ---
 ## introduction
@@ -19,13 +19,13 @@ Tho's Light was developed specifically for [In Pursuit of his Own Hat](https://i
 
 ## customising
 
-Although the whole theme can be customised with some knowledge of CSS, some sections are easier to customise than others because they're configured with CSS variables at the top of the [thos-hat.css]({{ site.url }}{{ site.baseurl }}site-assets/css/thos-light.css) file.
+Although the whole theme can be customised with some knowledge of CSS, some sections are easier to customise than others because they're configured with CSS variables at the top of the [thos-light.css]({{ site.url }}{{ site.baseurl }}site-assets/css/thos-light.css) file.
 
 ### colours
 
 ![]({{ site.url }}{{ site.baseurl }}site-assets/images/2020-11-10-configurable-colours.png)
 
-All colour variables are defined at the top of [thos-hat.css]({{ site.url }}{{ site.baseurl }}site-assets/css/thos-light.css).
+All colour variables are defined at the top of [thos-light.css]({{ site.url }}{{ site.baseurl }}site-assets/css/thos-light.css).
 
 ```css
 --background-panel-color: #2e3337;
@@ -74,13 +74,13 @@ For pages using the `post` layout a table of contents panel will appear to the r
 
 Contents are built automatically using a small JavaScript  which scans the post for all `H2` and `H3` tags and builds the relevant links: [toc.js]({{ site.url }}{{ site.baseurl }}site-assets/js/toc.js)
 
-The indents and formats are set using the relevant CSS classes in [thos-hat.css]({{ site.url }}{{ site.baseurl }}site-assets/css/thos-light.css).
+The indents and formats are set using the relevant CSS classes in [thos-light.css]({{ site.url }}{{ site.baseurl }}site-assets/css/thos-light.css).
 
 ## phone screens
 
 If viewing on a narrow tablet or phone the layout will switch to a top-down format. 
 
-The max width for this setting is set at the bottom of [thos-hat.css]({{ site.url }}{{ site.baseurl }}site-assets/css/thos-light.css).
+The max width for this setting is set at the bottom of [thos-light.css]({{ site.url }}{{ site.baseurl }}site-assets/css/thos-light.css).
 
 ```css
 @media (max-width: 68rem)
@@ -153,7 +153,7 @@ if __name__ == "__main__":
 ```
 ## images
 
-Can be adjusted in [thos-hat.css]({{ site.url }}{{ site.baseurl }}site-assets/css/thos-light.css) by modifying the `img` tag.
+Can be adjusted in [thos-light.css]({{ site.url }}{{ site.baseurl }}site-assets/css/thos-light.css) by modifying the `img` tag.
 
 ![placeholder](https://placehold.it/800x400 "Large")
 ![placeholder](https://placehold.it/400x200 "Medium")

@@ -30,16 +30,10 @@
     --panel-border-radius: 0.5rem;
 
     /* side panel Specifics */
-    --side-panel-flex-basis: 20%;
+    --side-panel-width: 15rem;
 
     /* toc panel specifics */
-    --toc-panel-flex-basis: 15%;
-
-    /* post panel specifics */
-    --post-panel-flex-basis: 60%;
-
-    /* page panel specifics */
-    --page-panel-flex-basis: 78%;
+    --toc-panel-width: 15rem;
 
   }
 
@@ -83,12 +77,6 @@ h2 {
     border-width: 2px;
     padding: 4px;
 }
-
-/* h3, h4, h5, h5 {
-    font-family: var(--heading-font-family);
-    margin-top: 0;
-    color: var(--body-text-color);
-} */
 
 hr {
     position: relative;
@@ -234,14 +222,13 @@ tbody tr:nth-child(odd) th {
     text-align: left;
     margin-top: -0.75rem;
     margin-bottom: -1rem;
-
 }
 
 /* side panel */
 
 .side-panel {
-    width: 15rem;
-    flex: 0 0 15rem;
+    width: var(--side-panel-width);
+    flex: 0 0 var(--side-panel-width);
     text-align: center;
 }
 
@@ -277,6 +264,11 @@ tbody tr:nth-child(odd) th {
 .side-panel-contacts {
     margin-top: 1rem;
     text-align: center;
+    font-size: 2rem;
+}
+
+.side-panel-contact-icon {
+    margin: 0.80rem;
 }
 
 /* table of contents panel (posts only) */
@@ -285,7 +277,8 @@ tbody tr:nth-child(odd) th {
  * the panel but also have it scroll with the contents */
 
 .toc-panel-flex {
-    flex: 0 0 15rem;
+    width: var(--toc-panel-width);
+    flex: 0 0 var(--toc-panel-width);
     flex-direction: column;
 }
 

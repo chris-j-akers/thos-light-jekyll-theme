@@ -45,8 +45,7 @@ All colour variables are defined at the top of [thos-light.css]({{ site.url }}{{
 The default fonts are [Montserrat](https://fonts.google.com/specimen/Montserrat) for the body and bolded [Inconsolata](https://fonts.google.com/specimen/Inconsolata) for code. Both are freely available from Google Fonts. If you want to add a different font you will need to adjust the link found in `_includes/head.html`.
 
   ```html
-  <link rel="stylesheet" 
-   href="https://fonts.googleapis.com/css?family=Montserrat:400,400italic,700|Inconsolata:400,400">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400italic,700|Inconsolata:400,400">
   ```
 
 ## sidebar

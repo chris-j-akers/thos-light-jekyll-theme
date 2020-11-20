@@ -451,6 +451,7 @@ pre code {
         margin-right: auto;
     }
     .toc-panel-flex {
+        width: 100%;
         flex: 0 0 0;
         flex-direction: column;
         margin-bottom: 1rem;

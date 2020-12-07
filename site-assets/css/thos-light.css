@@ -26,7 +26,7 @@
        below 
      *
      */
-    --page-top-margin: 10rem;
+    --page-top-margin: 10vh;
     --global-container-max-width: 80rem;
     --container-item-horizontal-gap: 1rem;
     --container-item-vertical-gap: 1rem;

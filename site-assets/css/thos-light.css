@@ -8,6 +8,8 @@
     /* colours */
     --background-panel-color: #2e3337;
     --background-page-color: #222629;
+    --background-code-color: #222629;
+    --code-lineno-colour: #62892f;
     --heading-text-color: #86c232;
     --highlight-color: #86c232;     /* Used for smaller artefacts */
     --highlight-color-dark: #62892f;
@@ -39,7 +41,9 @@
     /* toc panel specifics */
     --toc-panel-width: 15rem;
 
-  }
+    /* post panel specifics */
+    --post-panel-width: 50rem;
+}
 
 /* Scroll Bar */
 ::-webkit-scrollbar {
@@ -210,6 +214,7 @@ tbody tr:nth-child(odd) th {
 /* panel used to display posts (smaller so we can fit toc in) */
 
 .post-panel {
+    width: var(--post-panel-width);
     margin-left: var(--container-item-horizontal-gap);
     margin-right: var(--container-item-horizontal-gap);
     color: var(--body-text-color);
@@ -248,9 +253,15 @@ tbody tr:nth-child(odd) th {
     color: var(--heading-text-color);
 }
 
+.side-panel-title h1 a:hover, a:focus {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
 .side-panel-tag-line {
     color: var(--side-panel-tag-line-color);
     margin-top: 1rem;
+    margin-bottom: 2rem;
     text-align: center;
     font-size: 1.25rem;
     font-weight: 300;
@@ -258,8 +269,12 @@ tbody tr:nth-child(odd) th {
 
 .side-panel-site-contents {
     margin-top: 1rem;
+    margin-bottom: 2rem;
     border-top: solid;
     border-bottom: solid;
+    border-width: 1px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .side-panel-site-contents-item {
@@ -268,8 +283,9 @@ tbody tr:nth-child(odd) th {
 
 .side-panel-contacts {
     margin-top: 1rem;
+    margin-bottom: 1rem;
     text-align: center;
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
 .side-panel-contact-icon {
@@ -391,40 +407,74 @@ tbody tr:nth-child(odd) th {
 /* code */
 
 .highlight {
-    margin-bottom: 1rem;
-    margin-top: -.5rem;
+    border: none;
     font-family: Inconsolata;
     font-weight: bold;
-    margin-bottom: 1rem;
     border-radius: var(--panel-border-radius);
+    line-height: 1.4;
 }
+
 code {
-    padding: .25em .5em;
+    margin: 0;
     color: var(--inline-code-color);
-    background-color: #2e3337;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
+
+a code {
+    text-decoration: underline;
+    text-decoration-color: var(--inline-code-color);
+}
+
 pre {
     display: block;
     margin-top: 0;
     margin-bottom: 1rem;
-    padding: 1rem;
-    font-size: 0.95rem;
-    line-height: 1.4;
+    padding: 0rem;
     white-space: pre;
-    white-space: pre-wrap;
-    word-break: break-all;
-    word-wrap: break-word;
-    background-color: #000;
+    background-color: var(--background-code-color);
+    font-size: 0.9rem;
 }
+
+pre.highlight {
+    padding: 0;
+}
+
+div.highlight {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    background-color: var(--background-code-color);
+    margin-bottom: 1rem;
+    overflow-x:auto;
+    scroll-padding-top: 5rem;
+}
+
+table.rouge-table {
+    border: none;
+    margin: 0;    
+}
+
+table.rouge-table td {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+pre.lineno {
+    border: none;  
+    padding-top: 0rem;
+    padding-bottom:  0rem;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
+    color: var(--code-lineno-colour);
+}
+
 pre code {
     padding: 0;
     font-size: 100%;
     color: inherit;
-    background-color: transparent;
 }
-.highlight pre {
-    margin-bottom: 0;
-}
+
 
 /* Re-arrange top-to-bottom if we're looking on a phone */
 

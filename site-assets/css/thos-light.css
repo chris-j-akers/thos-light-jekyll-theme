@@ -477,15 +477,12 @@ pre code {
 
 
 /* Re-arrange top-to-bottom if we're looking on a phone */
+/* Re-arrange top-to-bottom if we're looking on a phone */
 
 @media (max-width: 68rem) {
-    ::-webkit-scrollbar {
-        width: 0px;
-        background: transparent; /* make scrollbar transparent */
-    }
-    html {
-        overflow: scroll; /* Hide scrollbars */
-    }
+    body{
+        -webkit-text-size-adjust: none;
+      }
     .flexbox-container {
         max-width: 48rem;
         align-items: stretch;
@@ -510,7 +507,6 @@ pre code {
     .toc-panel-fixed {
         position: unset;
         margin-top: 0;
-        /* margin-bottom: 1rem; */
         order: 1;
         max-width: 100%;
         width: 100%;
@@ -561,5 +557,8 @@ pre code {
     blockquote {
         padding-right: 5rem;
         padding-left: 1.25rem;
-      }
+    }
+    pre {
+        font-size: 0.4rem;
+    }
 }

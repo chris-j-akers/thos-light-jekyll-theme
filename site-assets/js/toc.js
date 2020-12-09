@@ -8,6 +8,7 @@
       history.pushState(null, null, ' ')
 
       /* toc will be a pseudo bullet-list so need to state what to use as each bullet */
+      
       const toc_item_bullet = '-'
 
       const toc_div_id = "toc-panel"
@@ -20,7 +21,9 @@
 
       baseUrl = window.location.href
 
-      /* only interested in h2, h3 headings as h1 is used for page titles.*/
+      /* only interested in h2, h3 headings as h1 is used for page titles and h4-h6
+      is a bit much. They could be easily added, though. */
+
       var headings = post_content.querySelectorAll("h2, h3")
       
       var toc_item_link
@@ -45,6 +48,7 @@
         }
         
          /* Flexibox needs the items wrapped in DIV tags to order them correctly */
+
         toc_item_div = document.createElement('DIV')
         toc_item_div.appendChild(toc_item_link)
         toc_panel.appendChild(toc_item_div)

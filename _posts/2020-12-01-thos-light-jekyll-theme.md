@@ -8,14 +8,20 @@ author: cakers
 
 Tho's Light is a [Jekyll](http://jekyllrb.com) theme that, by default, places content centrally with a simple sidebar to the left and (for posts) a clickable table of contents fixed to the right. 
 
-<img src="{{ site.url }}{{ site.baseurl }}site-assets/images/2020-11-10-blog-post-example.png" />
+![]({{ site.url }}{{ site.baseurl }}site-assets/images/2020-11-10-blog-post-example.png)
 
-If the screen is narrow (i.e. viewing on a phone) then content is re-stacked vertically for easier reading.
+For narrow screens content is re-stacked vertically for easier reading.
 
-<img src="{{ site.url }}{{ site.baseurl }}site-assets/images/2020-11-10-blog-post-example-phone-small.png" style="text-align: center; margin-left: 32%;" />
+![]({{ site.url }}{{ site.baseurl }}site-assets/images/2020-11-10-blog-post-example-phone-small.png)
 
 \
-Tho's Light was developed specifically for [In Pursuit of his Own Hat](https://inpursuitofhisownhat.github.io).
+Tho's Light was developed specifically for [cakers.io](https://cakers.io) and made available under the MIT licence. It's provided 'as is' because I'm clearly not a professional website developer, I just wanted to create the blog theme myself. 
+
+Feel free to fork and fix where needs be and maybe even let me know!
+
+## download the theme
+
+The theme can be downloaded at the <a href="https://github.com/chris-j-akers/thos-light">GitHub repository</a>
 
 ## customising
 
@@ -30,14 +36,16 @@ All colour variables are defined at the top of [thos-light.css]({{ site.url }}{{
 ```css
 --background-panel-color: #2e3337;
 --background-page-color: #222629;
+--background-code-color: #222629;
+--code-lineno-colour: #62892f;
 --heading-text-color: #86c232;
 --highlight-color: #86c232;
 --highlight-color-dark: #62892f;
 --body-text-color: #d0d2d2;
 --side-panel-tag-line-color: #d0d2d2;
---inline-code-color: #b294bb;
---block-quote-text-color: #9095a0;
---block-quote-border-color: #9095a0;
+--inline-code-color: #cc6666;
+--block-quote-text-color: #d0d2d2;
+--block-quote-border-color: #d0d2d2;
 ```
 
 ### font
@@ -64,7 +72,7 @@ The sidebar contains four sections.
 
   <dt>contact links</dt>
   <dd>Based on information in <code>_config.yml</code> (email, github, linkedin) </dd>
-  <dd>Although these are plain text by default, they can easily be changed to font-awesome icons by editing the <code>sidebar.html</code> include file and adding the necessary references to the <code>head.html</code> include.</dd>
+  <dd>Although these are plain text by default, they can easily be changed to font-awesome icons by editing the <code>sidebar.html</code> include file and adding the necessary references to the <code>head.html</code> include.</dd> If required, the font-size can be adjusted in the `.side-panel-contacts` css class.
 </dl>
 
 ## table of contents
@@ -94,25 +102,26 @@ The theme has been created only with modern browsers in mind and very little con
 ### pop-out
 
 <div class="pop-out">
-  Here, the text has been formatted using the `pop-out` class which allows you to highlight important points in your text.
+  Here, the text has been formatted using the `pop-out` class which allows you to highlight important points.
 </div>
 
 ### block-quote
 
-> “There are very few moments in a man's existence when he experiences so much ludicrous distress, or meets with so little charitable commiseration, as when he is in pursuit of his own hat.”
+> “There are very few moments in a man's existence when he experiences so much ludicrous distress, or meets with so little charitable commiseration, as when he is in pursuit of his own hat.” - CHARLES DICKENS, PICKWICK PAPERS
 
-### html
+### general html
+
+A number of html tags have been catered for, but more can easily be added by adjusting the CSS in [thos-light.css]({{ site.url }}{{ site.baseurl }}site-assets/css/thos-light.css). If an html tag isn't there, it's just because I haven't used it, yet.
 
 - **bold text**, use `<strong>`.
 - *italics*, use `<em>`.
 - Abbreviations, like <abbr title="HyperText Markup Langage">HTML</abbr> should use `<abbr>` tag.
-- Citations, like <cite>&mdash; Charles Dickens</cite>, should use `<cite>`.
-- <del>Strikethrough text</del>
-- Superscript <sup>text</sup> uses `<sup>` and subscript <sub>text</sub> uses `<sub>`.
 
 ## code blocks
 
-Code is displayed using the default [Tomorrow Night](https://github.com/chriskempson/tomorrow-theme) theme by Chris Kempson, but a number of other themes have been included and these can be set in the `_config.yml` file.
+Code is displayed using the default [Tomorrow Night](https://github.com/chriskempson/tomorrow-theme) theme by Chris Kempson, but a number of other themes taken from [Rouge](https://github.com/rouge-ruby/rouge) have been included and these can be set in the `_config.yml` file.
+
+By default line numbers are enabled (see `_config.yml`). Their font colour is set in the CSS variable: `--code-lineno-colour: #62892f`;
 
 ```yaml
 syntax-rouge-theme: tomorrow-night
@@ -126,79 +135,29 @@ syntax-rouge-theme: tomorrow-night
                     # tulip
 ```
 
-### c
+### c example
 
 ```c
 #include <stdio.h>
 
 void main(int argc, char** argv) {
-  
-  /* Let's say hello to everyone */
-
-  printf("Hello World!");
-
+  printf("Hello World!\n");
 }
 ```
-### python
+### c++ example
+```c++
+#include <iostream>
+
+int main() {
+    std::cout << "Hello World!" << endl;
+    return 0;
+}
+```
+### python example
 ```python
 def hello_world():
-
   return "Hello World\n"
 
-# Now run the function
 if __name__ == "__main__":
-
   print(hello_world())
 ```
-## images
-
-Can be adjusted in [thos-light.css]({{ site.url }}{{ site.baseurl }}site-assets/css/thos-light.css) by modifying the `img` tag.
-
-![placeholder](https://placehold.it/800x400 "Large")
-![placeholder](https://placehold.it/400x200 "Medium")
-![placeholder](https://placehold.it/200x200 "Small")
-
-## tables
-
-Use standard HTML or markdown style for tables.
-
-<table>
-  <thead>
-    <tr>
-      <th>band member</th>
-      <th>sing</th>
-      <th>play guitar</th>
-      <th>play drums</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>john</td>
-      <td>yes</td>
-      <td>yes</td>
-      <td>no</td>
-    </tr>
-    <tr>
-      <td>paul</td>
-      <td>yes</td>
-      <td>yes</td>
-      <td>no</td>
-    </tr>
-    <tr>
-      <td>george</td>
-      <td>yes</td>
-      <td>yes</td>
-      <td>no</td>
-    </tr>
-    <tr>
-      <td>ringo</td>
-      <td>yes</td>
-      <td>yes</td>
-      <td>no</td>
-    </tr>
-  </tbody>
-</table>
-
-## download the theme
-
-The theme can be downloaded at the <a href="https://github.com/inpursuitofhisownhat/thos-light">GitHub repository</a>

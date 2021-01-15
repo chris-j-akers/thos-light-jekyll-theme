@@ -1,5 +1,7 @@
 # tho's light
 
+[NOTE: This Theme has been retired. I'll no longer be making any updates to it]
+
 ## introduction
 
 Tho's Light is a [Jekyll](http://jekyllrb.com) theme that, by default, places content centrally with a simple sidebar to the left and (for posts) a navigable table of contents that scrolls down with the main panel.
